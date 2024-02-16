@@ -64,6 +64,9 @@ def sample_bqm(bqm, sampler):
 if __name__ == "__main__":
 
     ## ------- Set up our image grid -------
+    # Note that the grid is drawn using column-major ordering, 
+    # i.e. img[x][y] is in position (x,y) with (0,0) in the lower
+    # left corner.
     img = [[0,0,0],[1,0,1],[1,1,1]]
 
     ## ------- Build the graph -------
