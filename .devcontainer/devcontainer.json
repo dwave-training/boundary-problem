@@ -7,8 +7,8 @@
 	// source repo: https://github.com/dwavesystems/ocean-dev-docker
 	"image": "docker.io/dwavesys/ocean-dev:latest",
 
-	// install repo requirements on create and content update
-	"updateContentCommand": "pip install -r requirements.txt",
+	// install repo pip requirements (only if present) on content update
+	"updateContentCommand": "[ ! -r requirements.txt ] || pip install -r requirements.txt",
 
 	// forward/expose container services (relevant only when run locally)
 	"forwardPorts": [
@@ -34,18 +34,17 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": {},
+			"settings": {
+				"workbench": {
+					"editorAssociations": {
+						"*.md": "vscode.markdown.preview.editor"
+					},
+					"startupEditor": "readme"
+				}
+			},
 			"extensions": [
 				"ms-python.python",
 				"ms-toolsai.jupyter"
-			]
-		},
-
-		// Configure properties specific to Codespaces.
-		"codespaces": {
-			"openFiles": [
-				"README.md",
-				"README.rst"
 			]
 		}
 	}

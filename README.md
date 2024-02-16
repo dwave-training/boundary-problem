@@ -3,6 +3,10 @@
 Given the grid of black and white squares below, how can we identify a good
 boundary line between the two colors?
 
+This problem is well studied (and optimally solved) in computer vision / image
+processing (for example using 2d convolution with kernels like Sobel/Prewitt,
+and similar gradient operators).
+
 ![Grid](assets/original_image.png "Grid")
 
 ## Problem Set Up

@@ -45,7 +45,7 @@ def build_bqm(G):
     return bqm
 
 # TODO:  Choose QPU parameters in the following function
-def run_on_qpu(bqm, sampler):
+def sample_bqm(bqm, sampler):
     """Runs the BQM on the sampler provided.
 
     Args:
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 
     sampler = EmbeddingComposite(DWaveSampler())
 
-    sample_set = run_on_qpu(bqm, sampler)
+    sample_set = sample_bqm(bqm, sampler)
     sample = sample_set.first.sample
 
     draw_solution(sample, G)
