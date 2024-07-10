@@ -124,8 +124,8 @@ def draw_boundary(lut, G, img):
     for r in rects:
         ax.add_patch(r)
 
-    ax.set_xlim(0, 3)
-    ax.set_ylim(0, 3)
+    ax.set_xlim(0, len(img))
+    ax.set_ylim(0, len(img[0]))
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 
