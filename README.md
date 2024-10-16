@@ -42,7 +42,7 @@ for you to complete.
 
 1. In the `build_bqm` function, fill in the two components of the objective
  function and add them to the BQM.  
-2. In the `run_on_qpu` function, adjust the
+2. In the `sample_bqm` function, adjust the
  parameters for chain strength and number of runs until you obtain the optimal
  solution.
 
