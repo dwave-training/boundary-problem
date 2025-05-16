@@ -37,14 +37,8 @@ Translated back to our original grid of squares, this solution is shown below.
 ## The Exercise
 
 In class we reviewed the components of the objective function for this problem.
-In the main program file called `boundary.py`, a few sections have been left
-for you to complete.
-
-1. In the `build_bqm` function, fill in the two components of the objective
- function and add them to the BQM.  
-2. In the `sample_bqm` function, adjust the
- parameters for chain strength and number of runs until you obtain the optimal
- solution.
+In the main program file called `boundary.py`, a `build_bqm` function has been left
+for you to complete. Fill in the two components of the objective function and add them to the BQM.  
 
 When you run the program `boundary.py`, three images will be generated. The
 image `graph.png` is the graph model of the boundary problem. The image
