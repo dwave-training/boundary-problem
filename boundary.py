@@ -44,7 +44,6 @@ def build_bqm(G):
     
     return bqm
 
-# TODO:  Choose QPU parameters in the following function
 def sample_bqm(bqm, sampler):
     """Runs the BQM on the sampler provided.
 
@@ -53,8 +52,8 @@ def sample_bqm(bqm, sampler):
         sampler(dimod.Sampler): a sampler that uses the QPU
     """
 
-    chainstrength = 1 # update
-    numruns = 1 # update
+    chainstrength = 5 
+    numruns = 1000 
 
     sample_set = sampler.sample(bqm, chain_strength=chainstrength, num_reads=numruns, label='Training - Boundary Problem')
 
